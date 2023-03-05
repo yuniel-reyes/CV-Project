@@ -1,8 +1,4 @@
-#
-
 # CV App
-
-# CV APP
 
 - Should include:
 
@@ -14,3 +10,8 @@
 3. A section to add practical experience (company
    name, position title, main tasks of your jobs, date
    from and until when you worked for that company)
+
+## Discovering
+
+How to show colors when printing on the web?
+Cna I add event inside JXS elements

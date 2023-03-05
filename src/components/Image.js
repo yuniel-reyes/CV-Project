@@ -5,6 +5,10 @@ class Image extends Component {
   constructor(props) {
     super(props)
 
+    this.state = {
+      image: '',
+    }
+
     this.showImage = this.showImage.bind(this)
     this.removeLines = this.removeLines.bind(this)
   }
@@ -12,6 +16,9 @@ class Image extends Component {
   showImage = (e) => {
     const imgElement = document.getElementById('output')
     imgElement.src = URL.createObjectURL(e.target.files[0])
+    this.setState({
+      image: e.target.files[0].name,
+    })
     this.removeLines()
   }
 

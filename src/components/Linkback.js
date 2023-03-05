@@ -1,5 +1,7 @@
 import React from 'react'
 import Image from './Image'
+import Techbox from './Techbox'
+import Contact from './Contact'
 
 class LinkBack extends React.Component {
   // eslint-disable-next-line no-useless-constructor
@@ -38,7 +40,8 @@ class LinkBack extends React.Component {
       <div id='linkBack'>
         <span className='change-color' onClick={this.generateColor}></span>
         <Image />
-        <h1>Technologies</h1>
+        <Techbox />
+        <Contact />
       </div>
     )
   }

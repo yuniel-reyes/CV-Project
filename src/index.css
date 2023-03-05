@@ -5,14 +5,16 @@ html,
 body {
   height: 100%;
   margin: 0;
-  overflow: hidden;
+  overflow: inherit;
   display: flex;
   justify-content: center;
+  print-color-adjust: exact;
 }
 
 #root {
   width: 700px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
+  height: 100vh;
 }
 
 
@@ -20,25 +22,24 @@ body {
   display: grid;
   height: 100%;
   grid-template-columns: 0.6fr 0.9fr;
+  grid-template-rows: 1fr 150px;
 }
 
-
-/* #rightBack {
-  background-color: rgb(42, 190, 22);
-  height: 100vh;
-} */
 
 #linkBack {
   background-color: rgb(255, 247, 240);
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .change-color {
+  grid-row-start: 1;
   display: block;
   height: 20px;
   width: 20px;
   background-color: brown;
   cursor: pointer;
+  padding-bottom: 50px;
 }
 
 /* Image */
@@ -48,7 +49,7 @@ body {
     width: 150px;
     background-color: black;
     height: 2px;
-    position: absolute;
+    /* position: absolute; */
     top: 90px;
     cursor: pointer;
 }
@@ -66,15 +67,166 @@ body {
 }
 
 #imageBox {
+  /* grid-row-start: 1; */
+  height: 190px;
   position: relative;
-  left: 20px;
+  left: 44px;
+  top: 10px;
+  padding-bottom: 40px;
 }
 
 /* Technologies */
 h1 {
+  position: relative;
   font-size: 40px;
-  position: absolute;
-  top: 270px;
-  left: 355px;
+  top: 12px;
+  left: 24px;
+  cursor: pointer;
+  width: 220px;
+  padding: 0;
+  /* margin: 0; */
+}
+
+#tech-big-box {
+  margin-bottom: 90px;
+}
+
+#tech-box {
+  width: 240px;
+  height: 240px;
+  position: relative;
+  left: 15px;
+  background-color: white;
+}
+
+#imageBox2 > img {
+  width: 40px;
+  padding: 3px;
+  position: relative;
+  left: 10px;
+
+}
+
+#techImageInput {
+  display: none;
+  margin: 0;
+
+}
+
+#techInput {
+  /* position: absolute; */
+  top: 20px;
+  left: 20px;
+}
+
+#contact-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#contact-box img  {
+  width: 20px; 
+}
+
+.input-box {
+  display: flex;
+  gap: 9px;
+}
+
+input:focus {
+  outline: none;
+}
+
+h2 {
+  padding: 0;
+  margin: 0;
+}
+
+
+
+/* Right Part */
+
+hr {
+  width: 300px;
+}
+
+
+
+#rightBack {
+  background-color: white;
+  /* height: 100vh; */
+}
+
+#description-box {
+  position: relative;
+  top: 47px;
+  margin-left: 5px;
+}
+
+#name-box, #title-box {
+  margin-left: 5px;
+}
+
+#name {
+  width: 387px;
+  height: 53px;
+  font-size: 43px;
+  padding-left: 10px;
+}
+
+textarea {
+  resize: none;
+  padding-left: 10px;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+/* Experience */
+
+#date {
+  width: 102px;
+}
+
+#experience-box {
+  margin-left: 5px;
+}
+
+/* Education */
+#education-box {
+  margin-left: 5px;
+}
+
+
+/* Print button */
+#print {
+  width: 100px;
+  position: relative;
+  left: 300px;
+  top: 10px;
+}
+
+/* Printing */
+
+@media print {
+  /* All your print styles go here */
+  input, textarea {
+    border: none;
+    outline: none;
+  } 
+  @page {
+		margin-top: 0;
+		margin-bottom: 0;
+    border: none;
+	}
+  body {
+		padding-top: 72px;
+		padding-bottom: 72px ;
+	}
+  button {
+    display: none;
+  }
 }
 
